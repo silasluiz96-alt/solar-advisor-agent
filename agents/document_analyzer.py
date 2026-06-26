@@ -1,6 +1,7 @@
 import json
 from tools.document_intelligence import extract_energy_bill
-from tools.language_service import summarize_energy_bill
+from tools.language_service import analyze_energy_bill_language
+
 
 def analyze_energy_bill(pdf_url: str = None, pdf_path: str = None) -> dict:
     print("[DocumentAnalyzer] Iniciando extração da fatura...")
@@ -8,13 +9,14 @@ def analyze_energy_bill(pdf_url: str = None, pdf_path: str = None) -> dict:
     extracted = extract_energy_bill(pdf_url=pdf_url, pdf_path=pdf_path)
 
     print("[DocumentAnalyzer] Extração concluída. Iniciando análise de linguagem...")
-    language_summary = summarize_energy_bill(extracted)
+
+    language_analysis = analyze_energy_bill_language(extracted)
 
     result = {
         "status": "success",
         "profile": None,
         "data": extracted,
-        "language_analysis": language_summary,
+        "language_analysis": language_analysis,
     }
 
     print(f"[DocumentAnalyzer] Análise concluída: {json.dumps(result, indent=2, ensure_ascii=False)}")
