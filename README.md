@@ -24,7 +24,7 @@ O projeto segue o acordo de boas práticas definido no documento local `acordo_b
 - [x] v1: task 1 — Setup Azure AI Foundry + VS Code + GitHub
 - [x] v1: task 2 — Content Filter + Responsible AI (M-A-M-G)
 - [x] v1: task 3 — Document Intelligence (extrator de fatura de energia PDF)
-- [ ] v1: task 4 — Language Service no Document Analyzer
+- [x] v1: task 4 — Language Service no Document Analyzer
 - [ ] v1: task 5 — Azure AI Search (indexar docs ANEEL / RN 482 / RN 1000)
 - [ ] v1: task 6 — Orchestrator Agent + detector de perfil (residencial / condomínio)
 
@@ -45,5 +45,6 @@ O projeto segue o acordo de boas práticas definido no documento local `acordo_b
 <!-- Exemplo: [~] SQLite substituído por Supabase — Jun/2025 -->
 
 ## Arquitetura
+
 
 > Diagrama será adicionado na task 6
