@@ -203,6 +203,9 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Personal agreement file
+acordo_boas_praticas_v1.3.pdf
+
 # Ruff stuff:
 .ruff_cache/
 
