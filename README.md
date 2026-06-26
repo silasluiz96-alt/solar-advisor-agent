@@ -13,9 +13,9 @@ Sistema multi-agente de consultoria em energia solar para residências e condom�
 
 ### Semana 1 — Fundação
 
-- [ ] v1: task 1 — Setup Azure AI Foundry + VS Code + GitHub
-- [ ] v1: task 2 — Content Filter + Responsible AI (M-A-M-G)
-- [ ] v1: task 3 — Document Intelligence (extrator de fatura de energia PDF)
+- [x] v1: task 1 — Setup Azure AI Foundry + VS Code + GitHub
+- [x] v1: task 2 — Content Filter + Responsible AI (M-A-M-G)
+- [x] v1: task 3 — Document Intelligence (extrator de fatura de energia PDF)
 - [ ] v1: task 4 — Language Service no Document Analyzer
 - [ ] v1: task 5 — Azure AI Search (indexar docs ANEEL / RN 482 / RN 1000)
 - [ ] v1: task 6 — Orchestrator Agent + detector de perfil (residencial / condomínio)
