@@ -1,58 +1,59 @@
-import json
 import os
-
-import openai
+from azure.ai.textanalytics import TextAnalyticsClient
+from azure.identity import DefaultAzureCredential
 from dotenv import load_dotenv
 
 load_dotenv()
 
-DEFAULT_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+
+def get_language_client() -> TextAnalyticsClient:
+    endpoint = os.environ["AZURE_AI_SERVICES_ENDPOINT"]
+    credential = DefaultAzureCredential()
+    return TextAnalyticsClient(endpoint=endpoint, credential=credential)
 
 
-def _configure_openai():
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise ValueError("OPENAI_API_KEY não configurado. Configure a variável de ambiente para usar o Language Service.")
+def analyze_energy_bill_language(extracted: dict) -> dict:
+    client = get_language_client()
 
-    openai.api_key = api_key
-    return DEFAULT_MODEL
+    texts_to_analyze = []
 
+    if extracted.get("vendor_name"):
+        texts_to_analyze.append(extracted["vendor_name"])
+    if extracted.get("customer_name"):
+        texts_to_analyze.append(extracted["customer_name"])
 
-def _build_prompt(extracted: dict) -> str:
-    return (
-        "Você é um assistente que recebe dados extraídos de uma fatura de energia elétrica. "
-        "Gere uma resposta no formato JSON com os campos: summary, quality_status e issues. "
-        "O campo summary deve conter um breve resumo em português. "
-        "O campo quality_status deve ser 'ok', 'warning' ou 'missing_data'. "
-        "O campo issues deve ser uma lista de strings indicando problemas ou dados ausentes. "
-        "Use estas informações de fatura: \n" + json.dumps(extracted, ensure_ascii=False, indent=2)
-    )
+    result = {
+        "detected_language": None,
+        "entities": [],
+        "quality_status": "ok",
+        "issues": []
+    }
 
+    if not texts_to_analyze:
+        result["quality_status"] = "missing_data"
+        result["issues"].append("Nenhum texto disponível para análise de linguagem.")
+        return result
 
-def summarize_energy_bill(extracted: dict) -> dict:
-    model = _configure_openai()
-    prompt = _build_prompt(extracted)
+    # detect_language
+    language_response = client.detect_language(documents=texts_to_analyze)
+    for doc in language_response:
+        if not doc.is_error:
+            result["detected_language"] = doc.primary_language.name
+            break
 
-    response = openai.ChatCompletion.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": "Você é um assistente técnico que ajuda a analisar faturas de energia."},
-            {"role": "user", "content": prompt},
-        ],
-        temperature=0.2,
-        max_tokens=400,
-    )
+    # recognize_entities
+    entity_response = client.recognize_entities(documents=texts_to_analyze)
+    for doc in entity_response:
+        if not doc.is_error:
+            for entity in doc.entities:
+                result["entities"].append({
+                    "text": entity.text,
+                    "category": entity.category,
+                    "confidence": round(entity.confidence_score, 2)
+                })
 
-    text = response.choices[0].message.content.strip()
+    if not result["detected_language"]:
+        result["quality_status"] = "warning"
+        result["issues"].append("Idioma não detectado.")
 
-    try:
-        payload = json.loads(text)
-        return payload
-    except json.JSONDecodeError:
-        return {
-            "summary": text,
-            "quality_status": "warning",
-            "issues": [
-                "Resposta do modelo não pôde ser convertida em JSON. Verifique o conteúdo retornado.",
-            ],
-        }
+    return result
