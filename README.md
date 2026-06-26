@@ -9,6 +9,12 @@ Sistema multi-agente de consultoria em energia solar para residências e condom�
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35-green)
 
+## Desenvolvimento & Colaboração
+
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-Enabled-blue)
+
+Este projeto é desenvolvido com **colaboração humano-IA** usando GitHub Copilot integrado ao VS Code. O Copilot atua como co-autor no desenvolvimento de agentes, assistindo na geração de código, arquitetura e boas práticas de implementação.
+
 ## Roadmap v1
 
 ### Semana 1 — Fundação
