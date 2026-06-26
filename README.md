@@ -15,6 +15,8 @@ Sistema multi-agente de consultoria em energia solar para residências e condom�
 
 Este projeto é desenvolvido com **colaboração humano-IA** usando GitHub Copilot integrado ao VS Code. O Copilot atua como co-autor no desenvolvimento de agentes, assistindo na geração de código, arquitetura e boas práticas de implementação.
 
+O projeto segue o acordo de boas práticas definido no documento local `acordo_boas_praticas_v1.3.pdf` (não versionado), que formaliza esta colaboração humano-IA com preâmbulo, glossário, antipadrões e compromissos de revisão por pull request.
+
 ## Roadmap v1
 
 ### Semana 1 — Fundação
