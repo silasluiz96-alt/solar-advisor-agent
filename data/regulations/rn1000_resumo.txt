@@ -1,0 +1,30 @@
+RESOLUÇÃO NORMATIVA ANEEL Nº 1000/2021 — RESUMO PARA RAG
+
+TEMA: Condições gerais de fornecimento de energia elétrica — atualização e consolidação
+
+DEFINIÇÕES RELEVANTES PARA ENERGIA SOLAR:
+- Unidade consumidora: conjunto de instalações com ponto de entrega de energia
+- Demanda contratada: potência elétrica a ser obrigatoriamente disponibilizada pela distribuidora
+- Bandeira tarifária: mecanismo que sinaliza custo de geração (Verde, Amarela, Vermelha 1, Vermelha 2)
+
+BANDEIRAS TARIFÁRIAS:
+- Bandeira Verde: condições favoráveis de geração, sem acréscimo na tarifa
+- Bandeira Amarela: condições de atenção, acréscimo de R$ 1,343 por 100 kWh
+- Bandeira Vermelha 1: condições críticas, acréscimo de R$ 4,463 por 100 kWh
+- Bandeira Vermelha 2: condições mais críticas, acréscimo de R$ 7,877 por 100 kWh
+- Bandeira Escassez Hídrica: situação especial, acréscimo de R$ 14,20 por 100 kWh
+
+IMPACTO DA ENERGIA SOLAR:
+- Sistema solar reduz consumo da rede, diminuindo impacto das bandeiras tarifárias
+- Em meses de alta irradiação solar, geração própria pode eliminar totalmente o custo de bandeira
+- Condomínios com geração compartilhada reduzem custo das áreas comuns
+
+DIREITOS DO CONSUMIDOR:
+- Prazo máximo para ligação nova: 7 dias (zona urbana) e 15 dias (zona rural)
+- Distribuidora deve informar prazo de conexão de sistema de geração em até 5 dias úteis
+- Consumidor tem direito a ressarcimento por danos causados pela distribuidora
+
+ICMS SOBRE ENERGIA SOLAR:
+- Convênio ICMS 16/2015: estados podem conceder isenção de ICMS sobre energia compensada
+- Verificar legislação estadual específica — varia por estado
+- São Paulo: isenção de ICMS sobre a energia compensada (Decreto 62.036/2016)

@@ -1,0 +1,31 @@
+RESOLUÇÃO NORMATIVA ANEEL Nº 482/2012 — RESUMO PARA RAG
+
+TEMA: Micro e minigeração distribuída — compensação de energia elétrica (net metering)
+
+DEFINIÇÕES:
+- Microgeração distribuída: central geradora com potência instalada menor ou igual a 75 kW
+- Minigeração distribuída: central geradora com potência entre 75 kW e 5 MW
+- Sistema de compensação: créditos de energia injetada na rede podem ser usados em até 60 meses
+
+REGRAS PRINCIPAIS:
+- Consumidor pode instalar geração própria e conectar à rede da distribuidora
+- Energia gerada e não consumida é injetada na rede e gera créditos
+- Créditos são compensados na fatura de energia elétrica
+- Prazo para a distribuidora conectar o sistema: 34 dias (microgeração) e 66 dias (minigeração)
+- Modalidades: geração na própria unidade, autoconsumo remoto, geração compartilhada e condomínios
+
+CONDOMÍNIOS:
+- Permitida a geração compartilhada entre unidades do mesmo condomínio
+- Rateio dos créditos deve ser definido entre os condôminos
+- Cada unidade recebe créditos proporcionais ao rateio acordado
+
+FONTES PERMITIDAS:
+- Solar fotovoltaica
+- Eólica
+- Hídrica
+- Biomassa
+- Cogeração qualificada
+
+TARIFAS:
+- O consumidor continua pagando a TUSD (Tarifa de Uso do Sistema de Distribuição)
+- Créditos compensam apenas a tarifa de energia (TE), não a TUSD
